@@ -60,9 +60,9 @@ class _HomeState extends State<Home> {
   }
 
   Widget criarItemLista(context, index) {
-    final item = _listaTarefas[index]["titulo"];
+    //final item = _listaTarefas[index]["titulo"];
     return Dismissible(
-      key: Key(item),
+      key: Key(DateTime.now().millisecondsSinceEpoch.toString()),
       direction: DismissDirection.endToStart,
       onDismissed: (direction) {
         _ultimaTarefaRemovida = _listaTarefas[index];
